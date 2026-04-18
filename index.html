@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amulya Portfolio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Segoe UI;
+  background:#f3e8ff;
+  color:#333;
+  scroll-behavior:smooth;
+}
+
+/* Navbar */
+nav{
+  background:#1a102a;
+  padding:15px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+nav a:hover{color:#c4b5fd;}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(135deg,#7c3aed,#a78bfa);
+  color:white;
+}
+header h1{font-size:36px;}
+header p{margin-top:10px;}
+
+/* Sections */
+section{
+  padding:50px 10%;
+}
+h2{
+  margin-bottom:20px;
+  border-left:5px solid #7c3aed;
+  padding-left:10px;
+}
+
+/* Cards */
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+  margin-bottom:20px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* Skills */
+.skills span{
+  background:#7c3aed;
+  color:white;
+  padding:8px 15px;
+  margin:5px;
+  display:inline-block;
+  border-radius:20px;
+  font-size:14px;
+}
+
+/* Gallery */
+.gallery{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+.gallery img{
+  width:32%;
+  border-radius:8px;
+  transition:0.3s;
+}
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  margin-right:10px;
+  padding:10px 15px;
+  background:#7c3aed;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  transition:0.3s;
+}
+.btn:hover{
+  background:#5b21b6;
+  transform:scale(1.05);
+}
+
+/* Links */
+a{
+  color:#7c3aed;
+}
+a:hover{
+  text-decoration:underline;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#1a102a;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#activities">Activities</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Header -->
+<header>
+  <h1>Siripala Amulya Aarthi</h1>
+  <p>Visakapatnam | Andhra Pradesh</p>
+</header>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      Enthusiastic Computer Science undergraduate with a passion for learning and problem-solving, 
+      looking to start my career in a challenging environment where I can enhance my skills 
+      and contribute to organizational success.
+    </p>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <p><b>B.Tech (CSE)</b> – Dadi Institute of Engineering & Technology (2027)</p>
+    <p>Percentage: 79%</p><br>
+
+    <p><b>Intermediate</b> – Vidya Vikas Junior College (2023)</p>
+    <p>Percentage: 88%</p><br>
+
+    <p><b>SSC</b> – Sri Sai Saarvani School (2021)</p>
+    <p>Percentage: 100%</p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <h3>Technical Skills</h3>
+    <div class="skills">
+      <span>C</span>
+      <span>Java</span>
+      <span>Python</span>
+      <span>MS Excel</span>
+      
+      <span>Android Development</span>
+    </div>
+
+    <h3 style="margin-top:15px;">Soft Skills</h3>
+    <div class="skills">
+      <span>Communication</span>
+      <span>Teamwork</span>
+      <span>Decision Making</span>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>🏠 Smart IoT-Based Door Security System</h3>
+    <p>Smart home system with real-time monitoring using IoT sensors.</p>
+
+    <ul>
+      <li>🔐 Automated door locking</li>
+      <li>🌡️ Temperature & humidity monitoring</li>
+      <li>💡 Smart lighting</li>
+      <li>🚨 Intrusion detection</li>
+    </ul>
+
+    <div class="gallery">
+      <img src="https://amulyasiripala.github.io/smart-home-iot-project/image1.jpg">
+      <img src="https://amulyasiripala.github.io/smart-home-iot-project/image2.jpg">
+      <img src="https://amulyasiripala.github.io/smart-home-iot-project/image3.jpg">
+    </div>
+
+    <a href="https://amulyasiripala.github.io/smart-home-iot-project/" target="_blank" class="btn">🌐 Live Demo</a>
+    <a href="https://github.com/amulyasiripala/smart-home-iot-project" target="_blank" class="btn">💻 View Code</a>
+  </div>
+
+  <div class="card">
+    <h3>🚰 Drinking Water Safety Awareness</h3>
+    <p>Conducted awareness campaign in Anakapalli district.</p>
+    <ul>
+      <li>Educated about waterborne diseases</li>
+      <li>Promoted purification techniques</li>
+      <li>Encouraged hygiene practices</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- Certificates -->
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="card">
+    <ul>
+      <li>Aajhub – Full Stack Web Development</li>
+      <li>NPTEL – Python Programming</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Activities -->
+<section id="activities">
+  <h2>Activities & Strengths</h2>
+  <div class="card">
+    <ul>
+      <li>Anchor in school cultural program</li>
+      <li>Member of ACM</li>
+      <li>Event organizer</li>
+    </ul>
+
+    <h3 style="margin-top:15px;">Strengths</h3>
+    <div class="skills">
+      <span>Time Management</span>
+      <span>Creativity</span>
+      <span>Responsibility</span>
+      <span>Self-Motivated</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+
+    <p>Email: 
+      <a href="mailto:amulyasiripala16@gmail.com">amulyasiripala16@gmail.com</a>
+    </p>
+
+    <p>Phone: 
+      <a href="tel:7036069054">7036069054</a>
+    </p>
+
+    <p>LinkedIn: 
+      <a href="https://www.linkedin.com/in/AmulyaAarthi3" target="_blank">View Profile</a>
+    </p>
+
+    <p>GitHub: 
+      <a href="https://github.com/amulyasiripala" target="_blank">View GitHub</a>
+    </p>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Amulya Portfolio</p>
+</footer>
+
+</body>
+</html>
