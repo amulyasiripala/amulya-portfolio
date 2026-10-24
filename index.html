@@ -1,0 +1,1031 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siripala Amulya Aarthi | Portfolio</title>
+
+<style>
+:root {
+  --bg:#0b0718;
+  --card:#191129;
+  --cyan:#5eead4;
+  --pink:#ff2d92;
+  --purple:#a855f7;
+  --white:#f7f2ff;
+  --muted:#c9b9df;
+  --border:rgba(192,132,252,.25);
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+}
+
+body {
+  background:radial-gradient(circle at top left,#24103c,transparent 35%),var(--bg);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+.container {
+  width:min(1120px,90%);
+  margin:auto;
+}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(11,7,24,.97);
+  border-bottom:1px solid var(--border);
+}
+
+nav {
+  min-height:65px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  padding:12px 0;
+}
+
+.logo {
+  color:var(--cyan);
+  font-weight:800;
+  font-size:1.05rem;
+}
+
+.nav-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 14px;
+}
+
+.nav-links a {
+  font-size:.88rem;
+  color:var(--muted);
+}
+
+.nav-links a:hover {
+  color:var(--cyan);
+}
+
+section {
+  padding:65px 0;
+  scroll-margin-top:80px;
+}
+
+.heading {
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.heading h2 {
+  font-size:clamp(1.8rem,4vw,2.6rem);
+}
+
+.gradient {
+  background:linear-gradient(90deg,var(--purple),var(--pink),var(--cyan));
+  color:transparent;
+  background-clip:text;
+  -webkit-background-clip:text;
+}
+
+.panel {
+  background:linear-gradient(145deg,#211634,#120c20);
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:24px;
+  min-width:0;
+}
+
+.panel h3 {
+  color:var(--cyan);
+  margin-bottom:10px;
+}
+
+.panel p {
+  color:var(--muted);
+}
+
+.grid {
+  display:grid;
+  gap:22px;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:9px 14px;
+  border:1px solid var(--cyan);
+  border-radius:9px;
+  color:var(--cyan);
+  font-weight:bold;
+  font-size:.9rem;
+  margin:5px 5px 0 0;
+  cursor:pointer;
+}
+
+.btn:hover {
+  background:#5eead418;
+}
+
+.btn-primary {
+  background:#7628ad;
+  color:white;
+  border-color:var(--purple);
+}
+
+.tag {
+  display:inline-block;
+  padding:6px 13px;
+  border:1px solid var(--border);
+  border-radius:25px;
+  color:var(--cyan);
+}
+
+.pink {
+  color:var(--pink);
+  font-size:.8rem;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+/* HERO */
+
+.hero {
+  min-height:550px;
+  display:flex;
+  align-items:center;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:45px;
+  align-items:center;
+}
+
+.hero-text {
+  order:1;
+}
+
+.profile-area {
+  order:2;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.hero h1 {
+  font-size:clamp(2.2rem,5vw,3.7rem);
+  line-height:1.2;
+  margin:16px 0;
+  overflow-wrap:anywhere;
+}
+
+.hero h2 {
+  font-size:1.2rem;
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.hero p {
+  color:var(--muted);
+}
+
+.profile-card {
+  width:300px;
+  height:300px;
+  padding:7px;
+  border-radius:50%;
+  border:3px solid var(--cyan);
+  overflow:hidden;
+  box-shadow:0 0 35px #5eead426;
+}
+
+.profile-card img {
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center 25%;
+}
+
+/* ABOUT */
+
+.about-grid {
+  grid-template-columns:1.2fr .8fr;
+}
+
+.fact {
+  background:#a855f711;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px 15px;
+  margin-bottom:10px;
+  color:var(--muted);
+}
+
+.fact strong {
+  display:block;
+  color:var(--cyan);
+}
+
+/* SKILLS */
+
+.skills-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+
+.skill {
+  background:#a855f71c;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:5px 10px;
+  color:#eadcff;
+  font-size:.86rem;
+}
+
+/* PROJECTS AND CERTIFICATES */
+
+.projects-grid,
+.certificates-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.project-card,
+.certificate-card {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.project-card .actions,
+.certificate-card .actions {
+  margin-top:auto;
+  padding-top:15px;
+}
+
+.note {
+  font-size:.88rem;
+  color:var(--muted);
+}
+
+/* EDUCATION */
+
+.timeline {
+  max-width:850px;
+  margin:auto;
+}
+
+.timeline .panel {
+  margin-bottom:18px;
+}
+
+.date {
+  color:var(--pink);
+  font-weight:bold;
+  font-size:.9rem;
+}
+
+/* ACTIVITIES */
+
+.activities-list {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.activity-box {
+  width:100%;
+  padding:24px 28px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#211634,#120c20);
+  border:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  gap:22px;
+  transition:transform .2s,border-color .2s;
+}
+
+.activity-box:hover {
+  transform:translateY(-3px);
+  border-color:var(--cyan);
+}
+
+.activity-icon {
+  flex-shrink:0;
+  width:54px;
+  height:54px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#a855f722;
+  border:1px solid var(--border);
+  font-size:1.5rem;
+}
+
+.activity-box h3 {
+  color:var(--cyan);
+  margin-bottom:4px;
+  font-size:1.08rem;
+}
+
+.activity-box p {
+  color:var(--muted);
+  font-size:.96rem;
+}
+
+/* CONTACT */
+
+.contact-single {
+  max-width:900px;
+  margin:auto;
+  padding:30px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#211634,#120c20);
+  border:1px solid var(--border);
+}
+
+.contact-row {
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:12px;
+  padding:16px 0;
+  border-bottom:1px solid rgba(192,132,252,.18);
+}
+
+.contact-row:last-of-type {
+  border-bottom:none;
+}
+
+.contact-row strong {
+  color:var(--cyan);
+}
+
+.contact-row a {
+  color:#e5d7f7;
+  overflow-wrap:anywhere;
+}
+
+.contact-row a:hover {
+  color:var(--pink);
+}
+
+.contact-actions {
+  text-align:center;
+  margin-top:20px;
+}
+
+footer {
+  text-align:center;
+  border-top:1px solid var(--border);
+  padding:24px 0;
+  color:var(--muted);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:850px) {
+  nav {
+    flex-direction:column;
+  }
+
+  .nav-links {
+    justify-content:center;
+  }
+
+  .hero-grid {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .profile-area {
+    order:1;
+    justify-content:center;
+  }
+
+  .hero-text {
+    order:2;
+  }
+
+  .hero {
+    min-height:auto;
+  }
+
+  .about-grid {
+    grid-template-columns:1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:580px) {
+  section {
+    padding:48px 0;
+  }
+
+  .projects-grid,
+  .certificates-grid,
+  .skills-grid {
+    grid-template-columns:1fr;
+  }
+
+  .profile-card {
+    width:240px;
+    height:240px;
+  }
+
+  .panel,
+  .contact-single {
+    padding:20px;
+  }
+
+  .activity-box {
+    padding:19px;
+    gap:14px;
+    align-items:flex-start;
+  }
+
+  .activity-icon {
+    width:42px;
+    height:42px;
+    font-size:1.2rem;
+  }
+
+  .contact-row {
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+}
+</style>
+</head>
+
+<body id="top">
+
+<header>
+<nav class="container">
+  <a class="logo" href="#top">Siripala Amulya Aarthi</a>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#internship">Internship</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+<div class="container hero-grid">
+
+  <div class="hero-text">
+    <span class="tag">Computer Science Engineering</span>
+
+    <h1>
+      Hi, I'm <span class="gradient">Siripala Amulya Aarthi</span>
+    </h1>
+
+    <h2>Web Developer | Python Programmer | AI &amp; IoT Enthusiast</h2>
+
+    <p>
+      I am a Computer Science Engineering student interested in web
+      development, Python programming, Artificial Intelligence, and
+      IoT-based applications. I enjoy learning new technologies and
+      creating practical projects.
+    </p>
+
+    <div style="margin-top:20px">
+      <a class="btn btn-primary" href="#projects">Explore Projects</a>
+      <a class="btn"
+         href="./Resume/amulya%20resume.pdf"
+         target="_blank" rel="noopener">View Resume</a>
+    </div>
+
+    <div style="margin-top:12px">
+      <a class="btn"
+         href="https://www.linkedin.com/in/AmulyaAarthi3"
+         target="_blank" rel="noopener">LinkedIn ↗</a>
+
+      <a class="btn"
+         href="https://github.com/amulyasiripala"
+         target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+
+  <div class="profile-area">
+    <div class="profile-card">
+      <img src="./images/profile.png" alt="Siripala Amulya Aarthi">
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section id="about">
+<div class="container">
+
+  <div class="heading">
+    <h2>About <span class="gradient">Me</span></h2>
+  </div>
+
+  <div class="grid about-grid">
+
+    <article class="panel">
+      <h3>Who I Am</h3>
+      <p>
+        I am pursuing a B.Tech in Computer Science and Engineering at
+        DADI Institute of Engineering and Technology. I am interested
+        in front-end development, Python programming, Artificial
+        Intelligence, and IoT applications. I aim to improve my
+        technical skills through projects and practical experience.
+      </p>
+    </article>
+
+    <div>
+      <div class="fact">
+        <strong>Education</strong>
+        B.Tech CSE — 2027
+      </div>
+
+      <div class="fact">
+        <strong>College</strong>
+        DADI Institute of Engineering and Technology
+      </div>
+
+      <div class="fact">
+        <strong>Location</strong>
+        Visakhapatnam, Andhra Pradesh
+      </div>
+
+      <div class="fact">
+        <strong>Languages</strong>
+        English, Telugu, Hindi
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- SKILLS SECTION -->
+
+<section id="skills">
+<div class="container">
+
+  <div class="heading">
+    <h2>My <span class="gradient">Skills</span></h2>
+  </div>
+
+  <div class="grid skills-grid">
+
+    <article class="panel">
+      <h3>Programming</h3>
+      <div class="tags">
+        <span class="skill">Python</span>
+        <span class="skill">Java (Basic)</span>
+        <span class="skill">C</span>
+      </div>
+    </article>
+
+    <article class="panel">
+      <h3>Web Development</h3>
+      <div class="tags">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+      </div>
+    </article>
+
+    <article class="panel">
+      <h3>Tools</h3>
+      <div class="tags">
+        <span class="skill">VS Code</span>
+        <span class="skill">GitHub</span>
+      </div>
+    </article>
+
+    <article class="panel">
+      <h3>Core Concepts</h3>
+      <div class="tags">
+        <span class="skill">OOP</span>
+        <span class="skill">Data Structures</span>
+        <span class="skill">Problem Solving</span>
+      </div>
+    </article>
+
+    <article class="panel">
+      <h3>Areas of Interest</h3>
+      <div class="tags">
+        <span class="skill">Artificial Intelligence (AI)</span>
+        <span class="skill">Internet of Things (IoT)</span>
+        <span class="skill">Front-End Development</span>
+        <span class="skill">Python Programming</span>
+      </div>
+    </article>
+
+    <article class="panel">
+      <h3>Strengths</h3>
+      <div class="tags">
+        <span class="skill">Quick Learner</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Adaptability</span>
+      </div>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- PROJECTS SECTION -->
+
+<section id="projects">
+<div class="container">
+
+  <div class="heading">
+    <h2>My <span class="gradient">Projects</span></h2>
+  </div>
+
+  <div class="grid projects-grid">
+
+    <article class="panel project-card">
+      <p class="pink">PROJECT / 01</p>
+      <h3>Smart IoT-Based Door Security and Remote Monitoring System</h3>
+
+      <p>
+        An IoT-based security system designed for password
+        authentication, door access control, alerts, and environmental
+        monitoring through a web dashboard.
+      </p>
+
+      <div class="tags">
+        <span class="skill">Arduino</span>
+        <span class="skill">IoT</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">MQTT</span>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="./images/iot.jpeg"
+           target="_blank" rel="noopener">View Photo 1</a>
+
+        <a class="btn"
+           href="./images/iot%20poster.jpeg"
+           target="_blank" rel="noopener">View Photo 2</a>
+      </div>
+    </article>
+
+    <article class="panel project-card">
+      <p class="pink">PROJECT / 02</p>
+      <h3>IoT-Based Water Level Monitoring and Alarm System</h3>
+
+      <p>
+        A system designed to monitor water levels and provide an alert
+        when water reaches a specified level, helping users monitor
+        water storage more conveniently.
+      </p>
+
+      <div class="tags">
+        <span class="skill">IoT</span>
+        <span class="skill">Sensors</span>
+        <span class="skill">Embedded Systems</span>
+      </div>
+    </article>
+
+    <article class="panel project-card">
+      <p class="pink">PROJECT / 03</p>
+      <h3>Flexible ML-Based Cyber Attack Detection Using Spatiotemporal Patterns</h3>
+
+      <p>
+        A machine learning project that analyses network traffic to
+        identify potential cyber attacks using a Random Forest and
+        LSTM hybrid approach.
+      </p>
+
+      <div class="tags">
+        <span class="skill">Python</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Flask</span>
+        <span class="skill">LSTM</span>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="./images/cyber.png"
+           target="_blank" rel="noopener">View Photo</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- EDUCATION SECTION -->
+
+<section id="education">
+<div class="container">
+
+  <div class="heading">
+    <h2>My <span class="gradient">Education</span></h2>
+  </div>
+
+  <div class="timeline">
+
+    <article class="panel">
+      <span class="date">2023 – 2027</span>
+      <h3>B.Tech — Computer Science and Engineering</h3>
+      <p>DADI Institute of Engineering and Technology</p>
+      <p>CGPA: 8.67</p>
+    </article>
+
+    <article class="panel">
+      <span class="date">2021 – 2023</span>
+      <h3>Intermediate — MPC</h3>
+      <p>Vidya Vikas Junior College</p>
+      <p>Percentage: 88%</p>
+    </article>
+
+    <article class="panel">
+      <span class="date">2021</span>
+      <h3>SSC</h3>
+      <p>Sri Sai Saarvani EM School</p>
+      <p>Percentage: 98.5%</p>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- INTERNSHIP SECTION -->
+
+<section id="internship">
+<div class="container">
+
+  <div class="heading">
+    <h2>My <span class="gradient">Internship</span></h2>
+  </div>
+
+  <article class="panel" style="max-width:850px;margin:auto">
+    <span class="date">April 2026 – June 2026</span>
+    <h3>Python Developer Intern</h3>
+    <p>Codec Technologies Pvt. Ltd.</p>
+    <p>
+      Practical learning and technical skill development through
+      Python programming.
+    </p>
+
+    <div style="margin-top:12px">
+      <a class="btn"
+         href="./certificates/python%20internship.pdf"
+         target="_blank" rel="noopener">View Internship Certificate</a>
+    </div>
+  </article>
+
+</div>
+</section>
+
+<!-- CERTIFICATES SECTION -->
+
+<section id="certificates">
+<div class="container">
+
+  <div class="heading">
+    <h2>My <span class="gradient">Certificates</span></h2>
+    <p style="color:var(--muted)">Open or download your certificate PDFs</p>
+  </div>
+
+  <div class="grid certificates-grid">
+
+    <article class="panel certificate-card">
+      <h3>Aajhub — Full Stack Web Development</h3>
+      <p>Full Stack Web Development Certificate</p>
+      <p class="note">PDF certificate</p>
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="./certificates/Aajhub.pdf"
+           target="_blank" rel="noopener">View Certificate</a>
+        <a class="btn"
+           href="./certificates/Aajhub.pdf"
+           download>Download PDF</a>
+      </div>
+    </article>
+
+    <article class="panel certificate-card">
+      <h3>AWS Training</h3>
+      <p>Foundations of Prompt Engineering</p>
+      <p class="note">PDF certificate</p>
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="./certificates/AWS%20Trining.pdf"
+           target="_blank" rel="noopener">View Certificate</a>
+        <a class="btn"
+           href="./certificates/AWS%20Trining.pdf"
+           download>Download PDF</a>
+      </div>
+    </article>
+
+    <article class="panel certificate-card">
+      <h3>Data Science</h3>
+      <p>Exploratory Data Analysis for Data Science with R Software</p>
+      <p class="note">PDF certificate</p>
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="./certificates/data%20science.pdf"
+           target="_blank" rel="noopener">View Certificate</a>
+        <a class="btn"
+           href="./certificates/data%20science.pdf"
+           download>Download PDF</a>
+      </div>
+    </article>
+
+    <article class="panel certificate-card">
+      <h3>Oracle Certificate</h3>
+      <p>Oracle certificate</p>
+      <p class="note">PDF certificate</p>
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="./certificates/oracle.pdf"
+           target="_blank" rel="noopener">View Certificate</a>
+        <a class="btn"
+           href="./certificates/oracle.pdf"
+           download>Download PDF</a>
+      </div>
+    </article>
+
+    <article class="panel certificate-card">
+      <h3>Python Internship</h3>
+      <p>Python internship certificate</p>
+      <p class="note">PDF certificate</p>
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="./certificates/python%20internship.pdf"
+           target="_blank" rel="noopener">View Certificate</a>
+        <a class="btn"
+           href="./certificates/python%20internship.pdf"
+           download>Download PDF</a>
+      </div>
+    </article>
+
+    <article class="panel certificate-card">
+      <h3>The Joy of Computing using Python</h3>
+      <p>NPTEL certificate</p>
+      <p class="note">PDF certificate</p>
+      <div class="actions">
+        <a class="btn btn-primary"
+           href="./certificates/The%20Joy%20of%20Computing%20using%20Python.pdf"
+           target="_blank" rel="noopener">View Certificate</a>
+        <a class="btn"
+           href="./certificates/The%20Joy%20of%20Computing%20using%20Python.pdf"
+           download>Download PDF</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- ACTIVITIES SECTION -->
+
+<section id="activities">
+<div class="container">
+
+  <div class="heading">
+    <h2>Workshops &amp; <span class="gradient">Activities</span></h2>
+  </div>
+
+  <div class="activities-list">
+
+    <article class="activity-box">
+      <div class="activity-icon">💡</div>
+      <div>
+        <h3>IoT Development Workshop</h3>
+        <p>APMSDC · 2026</p>
+      </div>
+    </article>
+
+    <article class="activity-box">
+      <div class="activity-icon">📱</div>
+      <div>
+        <h3>Android Development Workshop</h3>
+        <p>APMSDC</p>
+      </div>
+    </article>
+
+    <article class="activity-box">
+      <div class="activity-icon">🏆</div>
+      <div>
+        <h3>Hackathons, Debates &amp; Coding Activities</h3>
+        <p>Participation in technical and extracurricular activities.</p>
+      </div>
+    </article>
+
+    <article class="activity-box">
+      <div class="activity-icon">👥</div>
+      <div>
+        <h3>ACM Student Chapter</h3>
+        <p>Announcements Lead &amp; Event Organizer</p>
+      </div>
+    </article>
+
+    <article class="activity-box">
+      <div class="activity-icon">📚</div>
+      <div>
+        <h3>Publication — Accident Safety</h3>
+        <p>Published in NCTC-2K25 · ISBN: 978-93-342-4654-4</p>
+      </div>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section id="contact">
+<div class="container">
+
+  <div class="heading">
+    <h2>Contact <span class="gradient">Me</span></h2>
+  </div>
+
+  <div class="contact-single">
+
+    <div class="contact-row">
+      <strong>Email</strong>
+      <a href="mailto:amulyasiripala16@gmail.com">
+        amulyasiripala16@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-row">
+      <strong>Phone</strong>
+      <a href="tel:+917036069054">+91 7036069054</a>
+    </div>
+
+    <div class="contact-row">
+      <strong>LinkedIn</strong>
+      <a href="https://www.linkedin.com/in/AmulyaAarthi3"
+         target="_blank" rel="noopener">Visit LinkedIn ↗</a>
+    </div>
+
+    <div class="contact-row">
+      <strong>GitHub</strong>
+      <a href="https://github.com/amulyasiripala"
+         target="_blank" rel="noopener">Visit GitHub ↗</a>
+    </div>
+
+    <div class="contact-actions">
+      <a class="btn btn-primary"
+         href="mailto:amulyasiripala16@gmail.com">Send Me an Email</a>
+    </div>
+
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+  <p>Designed by Siripala Amulya Aarthi</p>
+  <p>© <span id="year"></span> Siripala Amulya Aarthi</p>
+  <a href="#top" style="color:var(--cyan)">Back to Top ↑</a>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
